@@ -1,0 +1,128 @@
+[
+  {
+    "id": "SCHED-1792780508111",
+    "title": "Automated Creator Offer with PDF",
+    "message": "Hello! Here is our complete brochure in PDF.",
+    "imageUrl": null,
+    "pdfUrl": "https://example.com/bwb_brochure.pdf",
+    "pdfFileName": "BWB_Creator_Guide.pdf",
+    "intervalSeconds": 60,
+    "recipients": [
+      "919876543210",
+      "919876543211"
+    ],
+    "recipientsCount": 2,
+    "scheduledAt": "2026-10-23T20:35:08.110Z",
+    "scheduledTime": "2026-10-23T20:35:08.110Z",
+    "createdAt": "2026-10-23T18:35:08.111Z",
+    "status": "cancelled"
+  },
+  {
+    "id": "SCHED-1792780539861",
+    "title": "Automated Creator Offer with PDF",
+    "message": "Hello! Here is our complete brochure in PDF.",
+    "imageUrl": null,
+    "pdfUrl": "https://example.com/bwb_brochure.pdf",
+    "pdfFileName": "BWB_Creator_Guide.pdf",
+    "intervalSeconds": 60,
+    "recipients": [
+      "919876543210",
+      "919876543211"
+    ],
+    "recipientsCount": 2,
+    "scheduledAt": "2026-10-23T20:35:39.860Z",
+    "scheduledTime": "2026-10-23T20:35:39.860Z",
+    "createdAt": "2026-10-23T18:35:39.861Z",
+    "status": "cancelled"
+  },
+  {
+    "id": "SCHED-1792780645257",
+    "title": "Automated Creator Offer with PDF",
+    "message": "Hello! Here is our complete brochure in PDF.",
+    "imageUrl": null,
+    "pdfUrl": "https://example.com/bwb_brochure.pdf",
+    "pdfFileName": "BWB_Creator_Guide.pdf",
+    "intervalSeconds": 60,
+    "recipients": [
+      "919876543210",
+      "919876543211"
+    ],
+    "recipientsCount": 2,
+    "scheduledAt": "2026-10-23T20:37:25.256Z",
+    "scheduledTime": "2026-10-23T20:37:25.256Z",
+    "createdAt": "2026-10-23T18:37:25.257Z",
+    "status": "cancelled"
+  },
+  {
+    "id": "SCHED-1792859234162",
+    "title": "Automated Creator Offer with PDF",
+    "message": "Hello! Here is our complete brochure in PDF.",
+    "imageUrl": null,
+    "pdfUrl": "https://example.com/bwb_brochure.pdf",
+    "pdfFileName": "BWB_Creator_Guide.pdf",
+    "intervalSeconds": 60,
+    "recipients": [
+      "919876543210",
+      "919876543211"
+    ],
+    "recipientsCount": 2,
+    "scheduledAt": "2026-10-24T18:27:14.161Z",
+    "scheduledTime": "2026-10-24T18:27:14.161Z",
+    "createdAt": "2026-10-24T16:27:14.162Z",
+    "status": "cancelled"
+  },
+  {
+    "id": "SCHED-1792949983652",
+    "title": "Automated Creator Offer with PDF",
+    "message": "Hello! Here is our complete brochure in PDF.",
+    "imageUrl": null,
+    "pdfUrl": "https://example.com/bwb_brochure.pdf",
+    "pdfFileName": "BWB_Creator_Guide.pdf",
+    "intervalSeconds": 60,
+    "recipients": [
+      "919876543210",
+      "919876543211"
+    ],
+    "recipientsCount": 2,
+    "scheduledAt": "2026-10-25T19:39:43.651Z",
+    "scheduledTime": "2026-10-25T19:39:43.651Z",
+    "createdAt": "2026-10-25T17:39:43.652Z",
+    "status": "cancelled"
+  },
+  {
+    "id": "SCHED-1793036476790",
+    "title": "Automated Creator Offer with PDF",
+    "message": "Hello! Here is our complete brochure in PDF.",
+    "imageUrl": null,
+    "pdfUrl": "https://example.com/bwb_brochure.pdf",
+    "pdfFileName": "BWB_Creator_Guide.pdf",
+    "intervalSeconds": 60,
+    "recipients": [
+      "919876543210",
+      "919876543211"
+    ],
+    "recipientsCount": 2,
+    "scheduledAt": "2026-10-26T19:41:16.789Z",
+    "scheduledTime": "2026-10-26T19:41:16.789Z",
+    "createdAt": "2026-10-26T17:41:16.790Z",
+    "status": "cancelled"
+  },
+  {
+    "id": "SCHED-1793111134802",
+    "title": "Automated Creator Offer with PDF",
+    "message": "Hello! Here is our complete brochure in PDF.",
+    "imageUrl": null,
+    "pdfUrl": "https://example.com/bwb_brochure.pdf",
+    "pdfFileName": "BWB_Creator_Guide.pdf",
+    "intervalSeconds": 60,
+    "recipients": [
+      "919876543210",
+      "919876543211"
+    ],
+    "recipientsCount": 2,
+    "scheduledAt": "2026-10-27T16:25:34.802Z",
+    "scheduledTime": "2026-10-27T16:25:34.802Z",
+    "createdAt": "2026-10-27T14:25:34.802Z",
+    "status": "cancelled"
+  }
+]
