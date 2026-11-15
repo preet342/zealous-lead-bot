@@ -1,0 +1,281 @@
+[
+  {
+    "campaignTitle": "Unit Test Festive Offer",
+    "channel": "whatsapp_qr",
+    "totalTargeted": 27,
+    "sentCount": 0,
+    "failedCount": 27,
+    "timestamp": "2026-10-22T18:39:58.940Z",
+    "message": "Diwali Special Offer 30% OFF on all video editing!",
+    "imageUrl": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800",
+    "details": [
+      {
+        "target": "919988776655",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "9988776655",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "124568990",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "919876543210",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "8457960831",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "9668772215",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792599628565",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792599145190",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792598201671",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792598175093",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792598140620",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792683008299",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "163754218102846",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "239260363948240",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792631790715",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "278645163745457",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "166971282829393",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792605331056",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "258793371914294",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792601909898",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363406660129276",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363273035265623",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "79800576254050",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363184840886453",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "258398755016762",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363171914862438",
+        "status": "failed",
+        "error": "Delivery returned false"
+      }
+    ]
+  },
+  {
+    "campaignTitle": "Unit Test Festive Offer",
+    "channel": "whatsapp_qr",
+    "totalTargeted": 24,
+    "sentCount": 0,
+    "failedCount": 24,
+    "timestamp": "2026-10-22T15:29:26.138Z",
+    "message": "Diwali Special Offer 30% OFF on all video editing!",
+    "imageUrl": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800",
+    "details": [
+      {
+        "target": "919988776655",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "9988776655",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "124568990",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "919876543210",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "8457960831",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "9668772215",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792631790715",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "278645163745457",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "166971282829393",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792605331056",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "258793371914294",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792601909898",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792598140620",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792598175093",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792598201671",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792599145190",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "1792599628565",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363406660129276",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363273035265623",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "79800576254050",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363184840886453",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "258398755016762",
+        "status": "failed",
+        "error": "Delivery returned false"
+      },
+      {
+        "target": "120363171914862438",
+        "status": "failed",
+        "error": "Delivery returned false"
+      }
+    ]
+  }
+]
