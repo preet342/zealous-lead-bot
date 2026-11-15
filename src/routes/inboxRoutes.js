@@ -182,9 +182,9 @@ router.post('/api/chats/payment-link', async (req, res) => {
     if (!userId || !amount) {
       return res.status(400).json({ success: false, error: 'userId and amount required' });
     }
-    const upiLink = `upi://pay?pa=7008872017@okbizaxis&pn=BWB%20Media&am=${encodeURIComponent(amount)}&tn=${encodeURIComponent(description || 'Services Payment')}&cu=INR`;
+    const upiLink = `upi://pay?pa=7008872017.wallet@phonepe&pn=BWB%20Media&am=${encodeURIComponent(amount)}&tn=${encodeURIComponent(description || 'Services Payment')}&cu=INR`;
     const webPayLink = `https://rzp.io/l/bwb-pay?amount=${encodeURIComponent(amount)}`;
-    const msgText = `💳 Payment Request Generated\n\n📌 Service: ${description || 'Marketing & Media'}\n💵 Amount: ₹${amount}\n\n👉 Click here to pay via UPI (GPay/PhonePe/Paytm):\n${upiLink}\n\n🌐 Or Web Card / NetBanking:\n${webPayLink}\n\nPlease share screenshot after payment for instant confirmation!`;
+    const msgText = `💳 Payment Request Generated\n\n📌 Service: ${description || 'Marketing & Media'}\n💵 Amount: ₹${amount}\n\n👉 Click here to pay via PhonePe / UPI:\n${upiLink}\n\n🆔 UPI ID: 7008872017.wallet@phonepe\n\n🌐 Or Web Card / NetBanking:\n${webPayLink}\n\nPlease share screenshot after payment for instant confirmation!`;
     
     chatManager.logMessage(channel, userId, 'agent', msgText);
     if (channel === 'whatsapp_qr') {
