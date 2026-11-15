@@ -61,6 +61,11 @@ app.use((err, req, res, next) => {
   next(err);
 });
 
+// Lightweight ping endpoint for Cron-Job keep-alive (Ultra-small response to avoid "output too large")
+app.get('/ping', (req, res) => {
+  res.type('text/plain').send('OK');
+});
+
 // Health check & root endpoint
 app.get('/', (req, res) => {
   // If browser visit, redirect to dashboard (or login)
