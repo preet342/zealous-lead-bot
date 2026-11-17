@@ -376,9 +376,43 @@ CLIENT PROFILE COLLECTED SO FAR:
 ${JSON.stringify(leadInfo)}`;
     }
 
-    // Build rich multi-turn memory from recent chat history (up to 16 messages)
+    // Build rich multi-turn memory & CRM Intelligence from chat history
     const conv = chatManager.getConversation(channel, userId);
     const recentMessages = (conv.messages || []).slice(-16);
+    const contactName = conv.displayName || conv.userName || leadInfo.name || '';
+
+    const crmIntelligence = `
+CRM & CUSTOMER INTELLIGENCE CONTEXT:
+- Contact ID / Phone: ${userId}
+- Contact Name: ${contactName || 'New Contact'}
+- CRM Lead Stage: ${conv.leadStage || 'New Lead'}
+- Services Discussed: ${leadInfo.service || 'General Inquiry'}
+- Budget Discussed: ${leadInfo.budget || 'Not specified yet'}
+- Existing Notes: ${(conv.notes || []).map(n => n.text).join('; ') || 'None'}
+- Prior Appointments: ${(conv.appointments || []).length > 0 ? JSON.stringify(conv.appointments) : 'None'}
+- Prior Orders: ${(conv.orders || []).length > 0 ? JSON.stringify(conv.orders) : 'None'}
+`;
+
+    const fewShotExamples = `
+FEW-SHOT NATURAL HUMAN CONVERSATION EXAMPLES (MATCH THIS EXACT TONE):
+Example 1 (Casual Hindi Greeting):
+User: "Hi"
+Assistant: "Hello ji! Kaise hain aap? Sab theek-thaak?"
+
+Example 2 (Caring & Emotional):
+User: "Aaj bohot thak gaya kaam se, mood kharab hai"
+Assistant: "Arre re, poora din bhaagdoodh rahi lagta hai. Thoda aaram kijiye aur garam chai pijiye, kaam toh chalta rahega! Main hoon na yahan baat karne ke liye 😊"
+
+Example 3 (Service & Price Query):
+User: "Video editing ka kya rate hai?"
+Assistant: "Ji, hamari high-retention reels editing ₹800 se start hoti hai. Aap monthly kitni videos plan kar rahe hain aur kis niche ka content banate hain?"
+
+Example 4 (Returning Client Memory):
+User: "Mera proposal kahan tak pahuncha?"
+Assistant: "Haanji bilkul, main abhi team se check karke confirm karta hoon! Aapke reels package ke baare mein hi baat ho rahi hai na?"
+`;
+
+    systemPrompt += `\n${crmIntelligence}\n${fewShotExamples}`;
 
     const contents = [
       {
@@ -395,7 +429,7 @@ ${JSON.stringify(leadInfo)}`;
       });
       contents.push({
         role: 'model',
-        parts: [{ text: `Understood! I will chat with genuine respect, following all gender directives for ${profileGender.gender} (${profileGender.respectfulSalutation}), zero slang words (no bhai/dost/bro), and keeping full context of past conversations.` }]
+        parts: [{ text: `Understood! I will chat with genuine respect, empathy, and natural human conversational style following all CRM memory and gender directives.` }]
       });
 
       for (const m of recentMessages.slice(0, -1)) {
@@ -411,7 +445,14 @@ ${JSON.stringify(leadInfo)}`;
       });
     }
 
-    const candidateModels = ['gemini-3.5-flash-lite', 'gemini-3.5-flash'];
+    // Top-tier Gemini Models with instant failover
+    const candidateModels = [
+      'gemini-3-flash-preview',
+      'gemini-flash-latest',
+      'gemini-flash-lite-latest',
+      'gemini-3.8-flash',
+      'gemini-3.1-flash-lite'
+    ];
     for (const model of candidateModels) {
       try {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${config.ai.geminiApiKey}`;
