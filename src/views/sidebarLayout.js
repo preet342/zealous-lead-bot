@@ -809,7 +809,7 @@ function renderSidebarLayout({ title, activeNav, contentHtml, extraHead = '' }) 
       <div class="status-panel-full">
         <div class="status-item">
           <span class="status-item-label">WhatsApp Live:</span>
-          <span class="status-chip ${isConnected ? 'chip-online' : 'chip-offline'}">
+          <span id="sidebarWhatsAppChip" class="status-chip ${isConnected ? 'chip-online' : 'chip-offline'}">
             ${isConnected ? '🟢 Online' : '🔴 Disconnected'}
           </span>
         </div>
@@ -823,7 +823,7 @@ function renderSidebarLayout({ title, activeNav, contentHtml, extraHead = '' }) 
 
       <!-- Compact Status Dots (for minimized desktop state) -->
       <div class="status-panel-compact">
-        <div class="compact-status-dot" style="background:${isConnected ? '#10b981' : '#f87171'};" title="WhatsApp: ${isConnected ? 'Online' : 'Disconnected'}"></div>
+        <div id="sidebarWhatsAppDot" class="compact-status-dot" style="background:${isConnected ? '#10b981' : '#f87171'};" title="WhatsApp: ${isConnected ? 'Online' : 'Disconnected'}"></div>
         <div class="compact-status-dot" style="background:${currentMode === 'sales_closer' ? '#10b981' : currentMode === 'personal_human' ? '#ec4899' : '#a855f7'};" title="Bot Mode: ${modeLabel}"></div>
       </div>
 
@@ -922,6 +922,29 @@ function renderSidebarLayout({ title, activeNav, contentHtml, extraHead = '' }) 
         emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
       }
     }
+
+    // 4. Live Global WhatsApp Status Sync in Sidebar (Real-Time Reactive)
+    async function syncSidebarWhatsAppStatus() {
+      try {
+        const res = await fetch('/api/qr-status');
+        if (!res.ok) return;
+        const data = await res.json();
+        const chip = document.getElementById('sidebarWhatsAppChip');
+        const dot = document.getElementById('sidebarWhatsAppDot');
+        const isOnline = data && data.status === 'connected';
+
+        if (chip) {
+          chip.className = 'status-chip ' + (isOnline ? 'chip-online' : 'chip-offline');
+          chip.innerHTML = isOnline ? '🟢 Online' : '🔴 Disconnected';
+        }
+        if (dot) {
+          dot.style.background = isOnline ? '#10b981' : '#f87171';
+          dot.title = 'WhatsApp: ' + (isOnline ? 'Online' : 'Disconnected');
+        }
+      } catch (e) {}
+    }
+    syncSidebarWhatsAppStatus();
+    setInterval(syncSidebarWhatsAppStatus, 3000);
   </script>
 </body>
 </html>
