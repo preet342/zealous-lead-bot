@@ -8,7 +8,6 @@ const pino = require('pino');
 const path = require('path');
 const QRCode = require('qrcode');
 const fs = require('fs');
-const aiService = require('../services/aiService');
 
 const AUTH_FOLDER = path.join(__dirname, '../../data/auth_info_baileys');
 
@@ -317,7 +316,8 @@ async function initWhatsAppQr() {
 
         console.log(`[WhatsApp QR] Incoming message from ${pushName || ('+' + userPhone)} (${isSelfChat ? 'SELF-TEST' : 'CLIENT'}): "${text}"`);
 
-        // Process message through AI state machine
+        // Process message through AI state machine (Dynamic require breaks circular dependency)
+        const aiService = require('../services/aiService');
         const replyText = await aiService.processMessage(userPhone, 'whatsapp_qr', text);
 
         if (replyText) {
